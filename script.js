@@ -10,4 +10,6 @@
             const section = document.getElementById(sectionId);
             section.style.display = 'block';
         }
+    console.log('Script loaded');
+      
     </script>
