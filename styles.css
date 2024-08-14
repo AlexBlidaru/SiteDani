@@ -1,0 +1,280 @@
+ <style>
+        /* Stil pentru ascunderea secțiunilor */
+        #despre-noi, #materiale-foto, #materiale-video, #solicita-oferta, #contact, #colaboratori-foto {
+            display: none;
+        }
+
+        /* Stiluri generale */
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Lato', sans-serif;
+            line-height: 1.8;
+            margin: 0;
+            padding: 0;
+            background-color: #dbecec;
+            color: #333;
+            scroll-behavior: smooth;
+        }
+
+        /* Header */
+        header {
+            background-color:#90d4d1; 
+            color: #070606;
+            padding: 20px 0;
+            text-align: center;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        header h1 {
+            margin: 0;
+            font-family: 'Merriweather', serif;
+            font-size: 2.5em;   
+            letter-spacing: 2px;
+        }
+
+        div, section, nav {
+            background-color: #030303;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 20px 0 0;
+
+        }
+
+        nav ul li {
+            display: inline;
+            margin: 0 15px;
+
+        }
+
+        nav ul li a {
+          color: #black;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.1em;
+        }
+
+        nav ul li a:hover {
+            color: #96c2df; /* Blush deschis */
+        }
+
+        /* Stil pentru secțiuni */
+        section {
+            padding: 50px 20px;
+            margin: 20px 0;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 128, 128, 0.1);
+        }
+
+        section h2 {
+            font-family: 'Merriweather', serif;
+            font-size: 2em;
+            margin-bottom: 20px;
+            text-align: center;
+            position: relative;
+        }
+
+        section h2:after {
+            content: '';
+            display: block;
+            width: 60px;
+            height: 4px;
+            margin: 10px auto 0;
+        }
+ #despre-noi {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100%;
+            padding: 20px;
+            text-align: center;
+            background: rgba(0, 0, 0, 0.04); /* Background semi-transparent pentru a separa textul de video */
+            position: relative;
+            z-index: 1; /* Asigură-te că secțiunea este deasupra video-ului */
+        }
+
+        #despre-noi h2 {
+            font-size: 3em;
+            margin-bottom: 20px;
+            color: #fff;
+        }
+
+        #despre-noi p {
+            font-size: 1.2em;
+            max-width: 800px;
+text-shadow: 3px 3px 4px rgba(0, 0, 0, 0.8);
+color: #fff;
+        }
+
+        #solicita-oferta {
+            padding: 40px 20px;
+            margin: 10px auto;
+            text-align: center;
+            text-rendering:inherit;
+            font-family:Verdana, Geneva, Tahoma, sans-serif;     
+        }
+
+        /* Stil pentru galerie foto */
+        #materiale-foto .gallery img {
+            width: 200px;
+            margin: 10px;
+            margin-left: 2.2%;
+            border-radius: 10px;
+            transition: transform 0.3s, box-shadow 0.3s;
+            box-shadow: 0 4px 8px rgba(0, 128, 128, 0.2);   
+        }
+
+        #materiale-foto .gallery img:hover {
+            transform: scale(1.05);
+            box-shadow: 0 8px 16px rgba(0, 128, 128, 0.3);
+        }
+
+        /* Stil pentru container video */
+        #materiale-video .video-container {
+            display: flex;
+            flex-wrap: wrap; /* Permite elementelor să se rupă pe linii noi dacă nu mai încap */
+            justify-content: center; /* Centrează elementele orizontal */
+            gap: 20px; /* Spațiu între elemente */
+        }
+
+        #materiale-video .video-container iframe {
+            margin: 10px;
+            padding: 10px;
+            flex: 1 1 calc(30% - 20px);
+            max-width: calc(30% - 20px); /* Ajustează lățimea în funcție de numărul de elemente */
+            max-height: 35vh;
+            background-color: #90d4d1;
+            border-radius: 20px;
+            box-sizing: border-box;
+        }
+            
+        /* Stil pentru formular */
+        form {
+            display: flex;
+            flex-direction: column;
+            max-width: 600px;
+            margin: 0 auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 128, 128, 0.1);
+        }
+
+        form label {
+            margin-top: 15px;
+            font-weight: bold;
+            color: #006666;
+        }
+
+        form input,
+        form textarea {
+            padding: 12px;
+            margin-top: 5px;
+            border: 1px solid #20b2aa; /* Turcoaz mediu */
+            border-radius: 5px;
+            font-size: 1em;
+            background-color: #f0f8f8;
+        }
+
+        form input:focus,
+        form textarea:focus {
+            outline: none;
+            border-color: #008080;
+            box-shadow: 0 0 8px rgba(32, 178, 170, 0.5); /* Turcoaz mediu */
+        }
+
+        form button {
+            margin-top: 20px;
+            padding: 12px;
+            background-color: #008080;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            font-size: 1.2em;
+            cursor: pointer;
+            transition: background-color 0.3s, box-shadow 0.3s;
+        }
+
+        form button:hover {
+            background-color: #20b2aa; /* Turcoaz mediu */
+            box-shadow: 0 4px 8px rgba(0, 128, 128, 0.3);
+        }
+ header {
+            background: rgba(0, 0, 0, 0.5); /* Transparent header */
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+            z-index: 10;
+            position: relative;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 2.5em;
+            font-family: 'Merriweather', serif;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #008080;
+            color: #fff;
+            text-align: center;
+            padding: 2px 0;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+ .video-background {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            z-index: -1; /* Videoclipul este sub alte elemente */
+        }
+
+        .video-background video {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            filter: brightness(50%); /* Reduce luminozitatea pentru a scoate secțiunea în evidență */
+        }
+
+nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 10px 0;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        nav ul li {
+            display: inline;
+        }
+
+        nav ul li button {
+            background: none;
+            border: none;
+            color: #fff;
+            font-size: 1.1em;
+            cursor: pointer;
+            padding: 10px 20px;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        nav ul li button:hover {
+            background-color: rgba(255, 255, 255, 0.2);
+            color: #90d4d1;
+        }
+
+
+
+    </style>
