@@ -15,25 +15,30 @@ html {
 
 :root {
     --primary-bg-color: #333;
-}
+    --second-bg-color: #fffffde1;
+    --hover-bg-color: rgba(151, 105, 105, 0.603);}
+
 
 body {
     font-family: 'Lato', sans-serif;
     line-height: 1.8;
     margin: 0;
     padding: 0;
-    background-color: #dbecec;
+    background-color: #dbddec;
     color: #333;
     scroll-behavior: smooth;
 }
 
 /* Header */
 header {
-    background-color:#90d4d1; 
-    color: #070606;
-    padding: 20px 0;
-    text-align: center;
+    background: rgba(0, 0, 0, 0.5); /* Transparent header */
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    color: #070606;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+    z-index: 10;
+    position: relative;
 }
 
 header h1 {
@@ -43,15 +48,20 @@ header h1 {
     letter-spacing: 2px;
 }
 
-div, section, nav {
-    background-color: #030303;
+header img{
+    margin: 0;
+    padding: 0;
+    max-width: 10vw;
+    max-height: 10vh;
+    border-radius: 10px;
 }
+
+
 
 nav ul {
     list-style: none;
     padding: 0;
     margin: 20px 0 0;
-
 }
 
 nav ul li {
@@ -60,23 +70,25 @@ nav ul li {
 
 }
 
+nav ul li:hover {
+    transform: scale(1.0);
+    background-color: var(--hover-bg-color);
+    border-radius: 15px;
+}
+
 nav ul li a {
-  color: #black;
 text-decoration: none;
 font-weight: bold;
 font-size: 1.1em;
 }
 
-nav ul li a:hover {
-    color: #96c2df; /* Blush deschis */
-}
 
 /* Stil pentru secțiuni */
 section {
     padding: 50px 20px;
     margin: 20px 0;
     border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 128, 128, 0.1);
+    background-color: background: rgba(0, 0, 0, 0.04);
 }
 
 section h2 {
@@ -101,7 +113,7 @@ section h2:after {
     padding: 20px;
     margin: 0 auto;
     text-align: center;
-    background: rgba(0, 0, 0, 0.04); /* Background semi-transparent pentru a separa textul de video */
+
     z-index: 1; /* Asigură-te că secțiunea este deasupra video-ului */
 }
 
@@ -112,26 +124,90 @@ section h2:after {
 }
 
 #despre-noi p {
-    font-size: 1.2em;
-text-shadow: 3px 3px 4px rgba(0, 0, 0, 0.8);
-color: #fff;
+    font-size: 1.4em;
+    text-shadow: 3px 3px 4px rgba(0, 0, 0, 0.8);
+color: var(--second-bg-color);
 justify-content: center;
-align-items: center;
-max-width: 50vw; 
+align-items: center;    
+max-width: 60vw;
 }
 
+.social-media-links {
+    position: fixed;
+    bottom: 25px;
+    right: 20px;    
+    padding: 15px;
+    border-radius: 5px;
+}
+.social-media-links ul{
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.social-media-links li {
+    margin-bottom: 10px;
+}
+
+.social-media-links li:hover {
+    transform: scale(1.2);
+    background-color: var(--hover-bg-color);
+    border-radius: 10px;
+    opacity: 0.8;
+}
+
+.social-media-links a {
+    text-decoration: none;
+    color: var(--second-bg-color);
+    font-size: 18px;
+    display: flex;
+    align-items: center;    
+}
+
+.social-media-links img {
+    width: 24px; /* Dimensiunea pictogramelor */
+    height: 24px;
+    margin-right: 8px;  
+}
+
+.social-media-links .message {
+    margin-left: 10px;
+    font-size: 15px;
+    color: var(--second-bg-color);
+}
 #solicita-oferta {
     padding: 40px 20px;
     margin: 10px auto;
     text-align: center;
     text-rendering:inherit;
     font-family:Verdana, Geneva, Tahoma, sans-serif; 
+    color: var(--second-bg-color);
+
 }
 
+#contact-form ::before{
+    z-index: -1;
+    }
+
 #contact-form {
-    background-color: var(--primary-bg-color);
-    opacity: 0.45;
+    background-color: rgba(0, 0, 0, 0.108);
+    border-radius: 0.3;
 }
+
+#contact-form label{
+    color:#fff;
+}
+
+#contact, #colaboratori-foto {
+    color: var(--second-bg-color);
+}
+
+#contact, #colaboratori-foto p{
+    font-size: 20px;
+}
+
+
+
 .slideFoto {
     display:none;
     position: absolute;
@@ -143,6 +219,11 @@ max-width: 50vw;
     flex-wrap: wrap; /* Permite ca imaginile să se rupă pe linii noi dacă nu mai încap pe aceeași linie */
     justify-content: center; /* Centrează imaginile orizontal */
     padding: 20px;
+    color:var(--second-bg-color);
+}
+
+#materiale-video {
+    color:var(--second-bg-color);
 }
 
 /* Stil pentru galerie foto */
@@ -183,10 +264,9 @@ img {
     position: absolute;
     width: auto;
     padding: 16px;
-    margin-top: -22px;
-    color: white;
+    color: var(--second-bg-color);
     font-weight: bold;
-    font-size: 18px;
+    font-size: 30px;
     transition: 0.6s ease;
     border-radius: 0 3px 3px 0;
     user-select: none;
@@ -201,7 +281,8 @@ img {
 }
 
 .prev:hover, .next:hover {
-    background-color: var(--primary-bg-color);
+    background-color: var(--hover-bg-color);
+    border-radius: 15%;
 }
 .dot {
     cursor: pointer;
@@ -214,7 +295,7 @@ img {
     transition: background-color 0.6s ease;
 }
 .active, .dot:hover {
-    background-color: #717171;
+    background-color: var(--hover-bg-color);
 }
 
 /* Animatie fade */
@@ -269,7 +350,7 @@ form {
 form label {
     margin-top: 15px;
     font-weight: bold;
-    color: #006666;
+    color: #b1d4d4b9;
 }
 
 form input,
@@ -292,7 +373,7 @@ form textarea:focus {
 form button {
     margin-top: 20px;
     padding: 12px;
-    background-color: #008080;
+    background-color: rgb(15, 34, 34);
     color: #fff;
     border: none;
     border-radius: 5px;
@@ -302,23 +383,10 @@ form button {
 }
 
 form button:hover {
-    background-color: #20b2aa; /* Turcoaz mediu */
+    background-color: var(--hover-bg-color); 
     box-shadow: 0 4px 8px rgba(0, 128, 128, 0.3);
 }
-header {
-    background: rgba(0, 0, 0, 0.5); /* Transparent header */
-    color: #fff;
-    padding: 20px;
-    text-align: center;
-    z-index: 10;
-    position: relative;
-}
 
-header h1 {
-    margin: 0;
-    font-size: 2.5em;
-    font-family: 'Merriweather', serif;
-}
 
 /* Footer */
 footer {
@@ -373,10 +441,7 @@ nav ul li button {
     transition: background-color 0.3s, color 0.3s;
 }
 
-nav ul li button:hover {
-    background-color: rgba(255, 255, 255, 0.2);
-    color: #90d4d1;
-}
+
 
 /* Stiluri pentru modal */
 .modal {
@@ -417,18 +482,18 @@ nav ul li button:hover {
 
 .back-button {
     position: absolute;
-    bottom: 20px;
-    background-color: #008080;
+    bottom: 80px;
+    background-color: var(--primary-bg-color);
     color: white;
     padding: 10px 20px;
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    font-size: 18px;
+    font-size: 25px;
 }
 
 .back-button:hover {
-    background-color: #005757;
+    background-color: var(--hover-bg-color);
 }
 
 
