@@ -80,6 +80,8 @@ nav ul li a {
 text-decoration: none;
 font-weight: bold;
 font-size: 1.1em;
+    display: block;
+    padding: 14px 16px;
 }
 
 
@@ -257,6 +259,17 @@ img {
 @media (max-width: 768px) {
     #materiale-foto img {
         width: 80vw; /* Ajustează lățimea imaginilor pentru ecrane mai mici */
+    }
+}
+@media screen and (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav ul li {
+        width: 100%;
+        text-align: center;
     }
 }
 .prev, .next {
