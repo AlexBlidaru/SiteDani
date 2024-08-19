@@ -1,0 +1,1 @@
+Acest fișier există pentru a crea folderul `media`.
