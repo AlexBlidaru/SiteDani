@@ -10,7 +10,10 @@
 
 <body>
     <header class="selector">
-        <h1>Beyond the lens</h1>
+        
+        <h1>Memories on camera
+            <img src="logo.jpeg" alt="logo">
+        </h1>
         <nav>
             <ul>
                 <li><button onclick="activateLink('despre-noi')">Despre noi</button></li>
@@ -21,32 +24,73 @@
                 <li><button onclick="activateLink('colaboratori-foto')">Colaboratori foto</button></li>
             </ul>
         </nav>
+        
     </header>   
 
     <div class="video-background">
         <video autoplay muted loop>
-            <source src="C:\Users\alexb\Desktop\test_vsc\video.mp4" type="video/mp4">
+            <source src="video.mp4" type="video/mp4">
             Browser-ul nu suporta videoclipul.
         </video>
+    </div>
+
+    <div class="social-media-links">
+        <ul>
+            <li>
+                <a href="https://wa.me./+40736862886" target="_blank">
+                    <img src="whatsapp.png" alt="whatsapp">
+                    WhatsApp
+                </a>
+                <span class="message">Cu ce te pot ajuta?</span>
+            </li>
+            <li>
+                <a href="https://www.instagram.com" target="_blank">
+                    <img src="instagram.png" alt="instagram">
+                    Instagram
+                </a>
+            </li>
+            <li>
+                <a href="https://www.facebook.com" target="_blank">
+                    <img src="facebook.png" alt="facebook">
+                    FaceBook
+                </a>
+            </li>
+            <li>
+                <a href="https://www.youtube.com" target="_blank">
+                    <img src="youtube.png" alt="youtube">
+                    YouTube
+                </a>
+            </li>
+            <li>
+                <a href="tel:+40736862886" target="_blank">
+                    <img src="phone.png" alt="phone">
+                    Telefon
+                </a>
+            </li>
+            
+        </ul>
     </div>
 
     <section id="despre-noi">
         <h2>Despre Noi</h2>
         <p>Ma numesc Daniel si ma recomand drept un profesionist cu peste un deceniu de experiență în capturarea momentelor speciale. După ani în care am văzut cum fiecare cadru și fiecare clipă poartă cu sine o poveste unică, mi-am perfecționat tehnicile pentru a aduce acele povești la viață prin obiectivul camerei. Fiecare fotografie și fiecare secvență video pe care o creez este o reflecție a pasiunii și a atenției mele pentru detalii, asigurându-mă că fiecare client primește ceva cu adevărat special și personalizat.  </p>
         <p>Haideți să transformăm împreună momentele importante în amintiri de neuitat! </p>
+
+       
     </section>
 
+  
     <section id="materiale-foto" class="hidden-section">
         <h2>Galerie Foto</h2>
         <div class="slideshow-container">
             <div class="slideFoto fade">
-                <img src="DSC_8670.jpg" alt="Descriere fotografie 1" data-large="DSC_8670_large.jpg">
+                <img src="DSC_8670.jpg" alt="Descriere fotografie 1" data-large="DSC_8670.jpg">
             </div>
             <div class="slideFoto fade">
-                <img src="DSC_8789.jpg" alt="Descriere fotografie 2" data-large="DSC_8789_large.jpg">
+                <img src="DSC_8789.jpg" alt="Descriere fotografie 2" data-large="DSC_8789.jpg">
             </div>
             <div class="slideFoto fade">
-                <img src="DSC_8824.jpg" alt="Descriere fotografie 3" data-large="DSC_8824_large.jpg">
+                <img src="DSC_8824.jpg" alt="Descriere fotografie 3" data-large="DSC_8824.jpg">
             </div>
            
             
@@ -83,7 +127,7 @@
             <label for="nume">Nume:</label>
             <input type="text" id="nume" name="nume" required>
 
-            <label for="email">Email:</label>
+            <label for="email">E-mail:</label>
             <input type="email" id="email" name="email" required placeholder="example:mail@gmail.com">
 
             <label for="telefon">Telefon:</label>
@@ -98,9 +142,10 @@
 
     <section id="contact" class="hidden-section">
         <h2>Contact</h2>
-        <p>Suntem întotdeauna disponibili pentru a discuta despre viitoarele tale proiecte foto și video. Contactează-ne la:</p>
-        <p>Email: contact@fotovideo.ro</p>
-        <p>Telefon: +40 123 456 789</p>
+        <p>Suntem întotdeauna disponibili pentru a discuta despre viitoarele tale proiecte foto și video.</p>
+        <p>Ne gasesti la:</p>
+        <p><b>Email:</b> contact@fotovideo.ro</p>
+        <p><b>Telefon:</b> +40 123 456 789</p>
     </section>
 
     <section id="colaboratori-foto" class="hidden-section">
