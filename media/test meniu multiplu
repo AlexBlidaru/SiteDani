@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Site cu Feronstre Separate</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f0f0;
+        }
+
+        nav {
+            background-color: #444;
+            padding: 10px;
+            text-align: center;
+        }
+
+        nav button {
+            background-color: #555;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            margin: 0 10px;
+            cursor: pointer;
+            font-size: 16px;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+        nav button:hover {
+            background-color: #666;
+        }
+
+        .content {
+            display: none;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            background-color: #fff;
+            margin: 20px auto;
+            max-width: 800px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .active {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+
+<nav>
+    <button onclick="showContent('despre-noi')">Despre Noi</button>
+    <button onclick="showContent('materiale-foto')">Materiale Foto</button>
+    <button onclick="showContent('materiale-video')">Materiale Video</button>
+    <button onclick="showContent('solicita-oferta')">Solicită Ofertă</button>
+    <button onclick="showContent('contact')">Contact</button>
+</nav>
+
+<div id="despre-noi" class="content">
+    <h2>Despre Noi</h2>
+    <p>Acesta este conținutul pentru Despre Noi.</p>
+</div>
+
+<div id="materiale-foto" class="content">
+    <h2>Materiale Foto</h2>
+    <p>Acesta este conținutul pentru Materiale Foto.</p>
+</div>
+
+<div id="materiale-video" class="content">
+    <h2>Materiale Video</h2>
+    <p>Acesta este conținutul pentru Materiale Video.</p>
+</div>
+
+<div id="solicita-oferta" class="content">
+    <h2>Solicită Ofertă</h2>
+    <p>Acesta este conținutul pentru Solicită Ofertă.</p>
+</div>
+
+<div id="contact" class="content">
+    <h2>Contact</h2>
+    <p>Acesta este conținutul pentru Contact.</p>
+</div>
+
+<script>
+    function showContent(contentId) {
+        // Ascunde toate secțiunile
+        var contents = document.querySelectorAll('.content');
+        contents.forEach(function(content) {
+            content.classList.remove('active');
+        });
+
+        // Afișează secțiunea selectată
+        var selectedContent = document.getElementById(contentId);
+        selectedContent.classList.add('active');
+    }
+</script>
+
+</body>
+</html>
